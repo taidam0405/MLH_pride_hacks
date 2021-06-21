@@ -3,11 +3,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -25,7 +20,7 @@ function LoginForm() {
                     <LockOutlinedIcon />
                 </Avatar>
 
-                <Typography component="h1" variant="h5">
+                <Typography component="h1" variant="h5" style={{ fontWeight: 600 }}>
                     Log In
                 </Typography>
 
@@ -38,7 +33,7 @@ function LoginForm() {
                         id="username"
                         label="Username"
                         name="username"
-                        autoComplete="username"
+                        autoComplete="on"
                         autoFocus
                     />
 
@@ -51,12 +46,7 @@ function LoginForm() {
                         label="Password"
                         type="password"
                         id="password"
-                        autoComplete="current-password"
-                    />
-
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
+                        autoComplete="off"
                     />
 
                     <Button
@@ -65,55 +55,27 @@ function LoginForm() {
                         variant="contained"
                         color="primary"
                         className={classes.submit}
+                        style={{ fontWeight: 700 }}
                     >
                         Log In
                     </Button>
 
-                    <Grid 
-                        container
-                        justify="center"
-                    >
-                        <Grid item>
-                            <Link href="#" variant="body2">
-                                {"Don't have an account? Register"}
-                            </Link>
-                        </Grid>
-                    </Grid>
+                    <hr></hr>
                 </form>
             </div>
-            
-            <Box mt={8}>
-                <Copyright />
-            </Box>
         </Container>
     )
 }
 
 export default LoginForm
 
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="/">
-                RainbowsApp
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 const useStyles = makeStyles((theme) => ({
     paper: {
-        marginTop: '64px',
+        marginTop: '32px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#fff',
         padding: '16px 32px',
-        borderRadius: '8px',
-        boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
     },
     avatar: {
         margin: '8px',
@@ -125,11 +87,12 @@ const useStyles = makeStyles((theme) => ({
     },
     submit: {
         margin: '16px 0',
-        backgroundColor: theme.palette.primary.main,
-        transition: "0.4s ease",
-        "&:hover": {
-            backgroundColor: theme.palette.primary.main,
-            opacity: "0.8",
-        },
+        padding: '12px 16px',
+        // backgroundColor: theme.palette.primary.main,
+        // transition: "0.4s ease",
+        // "&:hover": {
+        //     backgroundColor: theme.palette.primary.main,
+        //     opacity: "0.8",
+        // },
     },
 }));

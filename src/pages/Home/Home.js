@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import LoginForm from "../../components/LoginForm"
+import RegisterModal from "../../components/RegisterModal"
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
 
             <div className="home__right">
                 <LoginForm />
+                <RegisterModal />
             </div>
         </div>
     )

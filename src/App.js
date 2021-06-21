@@ -16,6 +16,9 @@ const theme = createMuiTheme({
       // dark: "", // dark blue color
     },
   },
+  typography: {
+    fontFamily: "Roboto",
+  },
 });
 
 function App() {
