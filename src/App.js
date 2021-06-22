@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
 
 const theme = createMuiTheme({
   palette: {
@@ -27,7 +28,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className="App">
           <Switch>
-            <Route path='/' component={Home} />
+            <Route exact path='/' component={Home} />
+            <Route path='/dashboard' component={Dashboard} />
           </Switch>
         </div>
       </ThemeProvider>
