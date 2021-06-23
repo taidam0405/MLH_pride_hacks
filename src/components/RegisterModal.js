@@ -12,6 +12,7 @@ import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Avatar from '@material-ui/core/Avatar';
 
 function RegisterModal() {
     const classes = useStyles();
@@ -229,7 +230,7 @@ function RegisterModal() {
                                     Profile Picutre
                                 </Typography>
 
-                                <img src={selectedFile} alt="" className={classes.image}/>
+                                <Avatar src={selectedFile} className={classes.image}>RainbowsApp</Avatar>
 
                                 <div className={classes.uploadImage}>
                  
@@ -315,9 +316,10 @@ const useStyles = makeStyles((theme) => ({
     image: {
         width: '150px',
         height: '150px',
-        backgroundColor: '#ccc',
-        borderRadius: '50%',
-        border: '5px solid #000',
+        border: '5px solid #fd2c63',
+        backgroundColor: '#fff',
+        color: '#fd2c63',
+        fontFamily: 'Mansalva'
     },
     uploadImage: {
         width: '150px',

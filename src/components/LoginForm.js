@@ -11,6 +11,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Divider from '@material-ui/core/Divider';
 
 function LoginForm() {
     const classes = useStyles();
@@ -140,7 +141,7 @@ function LoginForm() {
                         Log In
                     </Button>
 
-                    <hr></hr>
+                    <Divider />
                 </form>
             </div>
         </Container>
